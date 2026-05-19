@@ -17,22 +17,63 @@
         body {
             background-color: rgb(53, 32, 2);
             color: white;
-            font-family:'Poppins',  sans-serif; 
+            font-family: 'Poppins', sans-serif;
         }
-        nav{
+
+        nav {
             display: flex;
             justify-content: space-around;
             align-items: center;
             height: 75px;
             background-color: saddlebrown;
         }
-        nav ul {
+
+        nav ul{
             display: flex;
             justify-content: center;
         }
-        nav ul li {
+
+        nav ul li{
             list-style: none;
             margin: 0 20px;
+        } 
+        nav ul li a{
+            text-decoration: none;
+            color: #fffdfd;
+        }
+        nav ul li a:hover{
+        color: #f0af79;
+        font-size: 1.05rem;
+        }
+
+        .left {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 50px 0;
+        }
+
+        .firstSection>div {
+            width: 30%;
+
+        }
+
+        .leftSection {
+            font-size: 2.5rem;
+        }
+
+        .rightSection img {
+            width: 70%;
+            height: 70%;
+            align-items: end;
+        }
+        .blsck {
+            color: rgb(241, 170, 93);
         }
     </style>
 </head>
@@ -43,15 +84,38 @@
             <div class="left">Anwesha's Portfolio</div>
             <div class="right"></div>
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Projects</li>
-                <li>Contact me </li>
+              <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>
             </ul>
         </nav>
-    </header>
+    </header>   `
 
-
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hiii, My name is <span class="blsck">Anwesha</span>
+                
+                <div>and i am a student by day
+                    <div> but a overthinker by night</div>
+                    <span id="element"></span>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="img1.png" alt="">
+            </div>
+        </section>
+    </main>
+   
+    <script src="htttps://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+     <script> 
+        var typed = new Typed('#element', {
+            strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
+            typeSpeed: 50,
+           
+        });
+    </script>
 </body>
 
 </html>
