@@ -28,22 +28,30 @@
             background-color: saddlebrown;
         }
 
-        nav ul{
+        nav ul {
             display: flex;
             justify-content: center;
         }
 
-        nav ul li{
+        nav ul li {
             list-style: none;
             margin: 0 20px;
-        } 
-        nav ul li a{
+        }
+
+        nav ul li a {
             text-decoration: none;
             color: #fffdfd;
         }
-        nav ul li a:hover{
-        color: #f0af79;
-        font-size: 1.05rem;
+
+        nav ul li a:hover {
+            color: #f0af79;
+            font-size: 1.05rem;
+        }
+        main hr{
+            border: 0;
+            background: #fffdfd;
+            height: 1px;
+            margin: 60px 84px;
         }
 
         .left {
@@ -55,7 +63,7 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
-            margin: 50px 0;
+            margin: 130px 0;
         }
 
         .firstSection>div {
@@ -72,8 +80,17 @@
             height: 70%;
             align-items: end;
         }
-        .blsck {
+
+        .black {
             color: rgb(241, 170, 93);
+        }
+
+        #element {
+            color: rgb(239, 154, 63);
+        }
+        .secondSection {
+            max-width: 80vw ;
+            margin: auto;
         }
     </style>
 </head>
@@ -84,21 +101,22 @@
             <div class="left">Anwesha's Portfolio</div>
             <div class="right"></div>
             <ul>
-              <li><a href="#home">Home</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact Me</a></li>
             </ul>
         </nav>
-    </header>   `
+    </header> `
 
     <main>
         <section class="firstSection">
             <div class="leftSection">
-                Hiii, My name is <span class="blsck">Anwesha</span>
-                
+                Hiii, My name is <span class="black">Anwesha</span>
+
                 <div>and i am a student by day
                     <div> but a overthinker by night</div>
+
                     <span id="element"></span>
                 </div>
             </div>
@@ -106,14 +124,18 @@
                 <img src="img1.png" alt="">
             </div>
         </section>
+        <hr>    
+        <section class="secondSection">
+            <h1>Past Experiences</h1>
+        </section>
     </main>
-   
-    <script src="htttps://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-     <script> 
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
         var typed = new Typed('#element', {
-            strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
+            strings: ['Web Developer', 'Artist'],
             typeSpeed: 50,
-           
+
         });
     </script>
 </body>
