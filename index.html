@@ -12,85 +12,263 @@
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
             background-color: rgb(53, 32, 2);
             color: white;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background-color: saddlebrown;
         }
 
         nav {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 24px;
             height: 75px;
-            background-color: saddlebrown;
+        }
+
+        .brand {
+            font-weight: 700;
+            letter-spacing: 0.02em;
         }
 
         nav ul {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
+            gap: 16px;
         }
 
         nav ul li {
             list-style: none;
-            margin: 0 20px;
         }
 
         nav ul li a {
             text-decoration: none;
             color: #fffdfd;
+            font-weight: 500;
+            transition: color 0.2s ease, transform 0.2s ease;
         }
 
         nav ul li a:hover {
             color: #f0af79;
-            font-size: 1.05rem;
-        }
-        main hr{
-            border: 0;
-            background: #fffdfd;
-            height: 1px;
-            margin: 60px 84px;
+            transform: translateY(-1px);
         }
 
-        .left {
-            font-size: 1rem;
-            font-weight: bold;
+        main {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 24px 60px;
         }
 
-        .firstSection {
+        .section {
+            padding: 80px 0;
+        }
+
+        .section h2 {
+            margin-top: 16px;
+            margin-bottom: 18px;
+            font-size: 2rem;
+        }
+
+        .section p {
+            max-width: 780px;
+            color: #e8e2d8;
+        }
+
+        .text-brown {
+            display: inline-block;
+            color: rgb(177, 105, 27);
+            font-size: 1.1rem;
+            letter-spacing: 0.05em;
+        }
+
+        .banner {
             display: flex;
-            justify-content: space-around;
             align-items: center;
-            margin: 130px 0;
+            justify-content: space-between;
+            gap: 40px;
+            min-height: 70vh;
         }
 
-        .firstSection>div {
-            width: 30%;
-
+        .banner-content {
+            max-width: 520px;
         }
 
-        .leftSection {
-            font-size: 2.5rem;
+        .banner-content h1 {
+            font-size: 3rem;
+            line-height: 1.05;
         }
 
-        .rightSection img {
-            width: 70%;
-            height: 70%;
-            align-items: end;
-        }
-
-        .black {
+        .banner-content h1 .accent {
             color: rgb(241, 170, 93);
         }
 
-        #element {
-            color: rgb(239, 154, 63);
+        .banner-content .intro {
+            margin: 24px 0;
+            font-size: 1.1rem;
         }
-        .secondSection {
-            max-width: 80vw ;
-            margin: auto;
+
+        .banner-content .typed {
+            display: inline-block;
+            color: rgb(239, 154, 63);
+            font-weight: 700;
+        }
+
+        .link-box {
+            margin-top: 28px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .action-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 22px;
+            background: rgb(241, 170, 93);
+            color: rgb(53, 32, 2);
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .action-button:hover {
+            background: rgb(255, 195, 108);
+            transform: translateY(-2px);
+        }
+
+        .banner-image img {
+            width: 100%;
+            max-width: 480px;
+            border-radius: 24px;
+            display: block;
+        }
+
+        .feature-grid,
+        .skill-list,
+        .projects-grid,
+        .timeline {
+            display: grid;
+            gap: 20px;
+        }
+
+        .feature-grid {
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            margin-top: 30px;
+        }
+
+        .card,
+        .project-card,
+        .timeline-item,
+        .contact-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 20px;
+            padding: 24px;
+        }
+
+        .card h3,
+        .project-card h3,
+        .timeline-item h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .skill-list {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            margin-top: 24px;
+        }
+
+        .skill-pill {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 18px;
+            border-radius: 999px;
+            background: rgba(240, 175, 121, 0.18);
+            color: #f4d6b1;
+            border: 1px solid rgba(240, 175, 121, 0.25);
+            font-weight: 500;
+        }
+
+        .projects-grid {
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            margin-top: 30px;
+        }
+
+        .timeline {
+            margin-top: 30px;
+        }
+
+        .timeline-item span {
+            display: inline-block;
+            margin-bottom: 10px;
+            color: rgb(239, 154, 63);
+            font-weight: 700;
+        }
+
+        .contact-card {
+            max-width: 740px;
+        }
+
+        .contact-card p {
+            margin-bottom: 18px;
+        }
+
+        .contact-list {
+            margin-top: 20px;
+            display: grid;
+            gap: 12px;
+        }
+
+        .contact-list a {
+            color: #f0dfc2;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px 0;
+            color: #d9c9ba;
+        }
+
+        @media (max-width: 900px) {
+            .banner {
+                flex-direction: column-reverse;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 650px) {
+            nav {
+                flex-direction: column;
+                gap: 12px;
+                height: auto;
+                padding: 16px 24px;
+            }
+
+            .banner-content h1 {
+                font-size: 2.4rem;
+            }
         }
     </style>
 </head>
@@ -98,35 +276,125 @@
 <body>
     <header>
         <nav>
-            <div class="left">Anwesha's Portfolio</div>
-            <div class="right"></div>
+            <div class="brand">Anwesha's Portfolio</div>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-    </header> `
+    </header>
 
     <main>
-        <section class="firstSection">
-            <div class="leftSection">
-                Hiii, My name is <span class="black">Anwesha</span>
-
-                <div>and i am a student by day
-                    <div> but a overthinker by night</div>
-
-                    <span id="element"></span>
+        <section id="home" class="section banner">
+            <div class="banner-content">
+                <div class="text-brown">Hello! I am Anwesha</div>
+                <h1>Hiii, my name is <span class="accent">Anwesha</span></h1>
+                <p class="intro">I am a student and aspiring web developer who loves building clean, responsive websites and intuitive digital experiences.</p>
+                <p>Currently creating beautiful UI designs by day and exploring new web ideas by night. I am a <span id="element" class="typed"></span></p>
+                <div class="link-box">
+                    <a class="action-button" href="https://github.com/anweshadas09" target="_blank" rel="noreferrer">View GitHub</a>
+                    <a class="action-button" href="resume.pdf" target="_blank" rel="noreferrer">Show Resume</a>
                 </div>
             </div>
-            <div class="rightSection">
-                <img src="img1.png" alt="">
+            <div class="banner-image">
+                <img src="img1.png" alt="Portfolio illustration">
             </div>
         </section>
-        <hr>    
-        <section class="secondSection">
-            <h1>Past Experiences</h1>
+
+        <section id="about" class="section">
+            <span class="text-brown">Who I am</span>
+            <h2>About Me</h2>
+            <p>I am a dedicated student and emerging developer with a passion for creating polished websites. I enjoy solving problems, turning ideas into working pages, and learning new front-end tools every day.</p>
+        </section>
+
+        <section id="skills" class="section">
+            <span class="text-brown">What I use</span>
+            <h2>Skills</h2>
+            <div class="skill-list">
+                <div class="skill-pill">HTML</div>
+                <div class="skill-pill">CSS</div>
+                <div class="skill-pill">JavaScript</div>
+                <div class="skill-pill">Python</div>
+                <div class="skill-pill">Git</div>
+                <div class="skill-pill">UI Design</div>
+                <div class="skill-pill">Problem Solving</div>
+                <div class="skill-pill">Django</div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <span class="text-brown">What I have done so far</span>
+            <h2>Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span>Front-End Developement • 2025</span>
+                    <h3>HTML/CSS Build Support</h3>
+                    <p>Assisted with layout updates, responsive design fixes, and user interface improvements for web pages.</p>
+                </div>
+                <div class="timeline-item">
+                    <span>Web Designer • 2024</span>
+                    <h3>Community Project</h3>
+                    <p>Designed and delivered a clean landing page for a local student group, improving readability and mobile usability.</p>
+                </div>
+                <div class="timeline-item">
+                    <span>Student Project • 2024</span>
+                    <h3>Personal Portfolio</h3>
+                    <p>Built a polished portfolio website to showcase projects, skills, and contact details with a consistent visual style.</p>
+                </div>
+                <div class="timeline-item">
+                    <span>Team Collaborator • 2023</span>
+                    <h3>Project Research</h3>
+                    <p>Worked alongside peers to research best practices in web design and prepare presentations for class projects.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <span class="text-brown">What I've built</span>
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Responsive Portfolio</h3>
+                    <p>A modern portfolio website showcasing work, skills, and a contact section with smooth navigation.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Landing Page Design</h3>
+                    <p>Created a polished homepage concept focused on clear typography, visual hierarchy, and easy layout flow.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <span class="text-brown">Learning journey</span>
+            <h2>Education</h2>
+            <div class="feature-grid">
+                <div class="card">
+                    <h3>Current Student</h3>
+                    <p>Studying in college while growing my skills in web development, design, and creative problem solving.</p>
+                </div>
+                <div class="card">
+                    <h3>Self-Learning</h3>
+                    <p>Regularly learning new front-end tools and techniques through online courses, tutorials, and personal practice.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <span class="text-brown">Let's connect</span>
+            <h2>Contact Me</h2>
+            <div class="contact-card">
+                <p>If you have a project, idea, or opportunity to collaborate, feel free to reach out. I am open to learning and contributing to new web experiences.</p>
+                <div class="link-box">
+                    <a class="action-button" href="anweshadas34138@gmail.com">Email Me</a>
+                    <a class="action-button" href="https://www.linkedin.com/in/anwesha-das-0a8361330/" target="_blank" rel="noreferrer">LinkedIn</a>
+                    <a class="action-button" href="https://github.com/anweshadas09" target="_blank" rel="noreferrer">GitHub</a>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -135,7 +403,9 @@
         var typed = new Typed('#element', {
             strings: ['Web Developer', 'Artist'],
             typeSpeed: 50,
-
+            backSpeed: 30,
+            backDelay: 1500,
+            loop: true,
         });
     </script>
 </body>
