@@ -156,10 +156,26 @@
             transform: translateY(-2px);
         }
 
+        .banner-image {
+            max-width: 420px;
+            width: 100%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
+
         .banner-image img {
             width: 100%;
-            max-width: 480px;
-            border-radius: 24px;
+            max-width: 320px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            object-position: center 10%;
+            transform: scale(1.8);
+            /* zoom in a bit */
+            border-radius: 50%;
+            border-radius: 50%;
+            border: 6px solid rgba(241, 170, 93, 0.25);
+            box-shadow: 0 24px 50px rgba(0, 0, 0, 0.25);
             display: block;
         }
 
@@ -254,7 +270,12 @@
         @media (max-width: 900px) {
             .banner {
                 flex-direction: column-reverse;
-                align-items: flex-start;
+                align-items: center;
+                text-align: center;
+            }
+
+            .banner-content {
+                max-width: 100%;
             }
         }
 
@@ -294,22 +315,26 @@
             <div class="banner-content">
                 <div class="text-brown">Hello! I am Anwesha</div>
                 <h1>Hiii, my name is <span class="accent">Anwesha</span></h1>
-                <p class="intro">I am a student and aspiring web developer who loves building clean, responsive websites and intuitive digital experiences.</p>
-                <p>Currently creating beautiful UI designs by day and exploring new web ideas by night. I am a <span id="element" class="typed"></span></p>
+                <p class="intro">I am a student and aspiring web developer who loves building clean, responsive websites
+                    and intuitive digital experiences.</p>
+                <p>Currently creating beautiful UI designs by day and exploring new web ideas by night. I am a <span
+                        id="element" class="typed"></span></p>
                 <div class="link-box">
-                    <a class="action-button" href="https://github.com/anweshadas09" target="_blank" rel="noreferrer">View GitHub</a>
+                    <a class="action-button" href="https://github.com/anweshadas09" target="_blank"
+                        rel="noreferrer">View GitHub</a>
                     <a class="action-button" href="resume.pdf" target="_blank" rel="noreferrer">Show Resume</a>
                 </div>
             </div>
             <div class="banner-image">
-                <img src="img1.png" alt="Portfolio illustration">
+                <img src="img.jpeg" alt="Portfolio illustration">
             </div>
         </section>
 
         <section id="about" class="section">
             <span class="text-brown">Who I am</span>
             <h2>About Me</h2>
-            <p>I am a dedicated student and emerging developer with a passion for creating polished websites. I enjoy solving problems, turning ideas into working pages, and learning new front-end tools every day.</p>
+            <p>I am a dedicated student and emerging developer with a passion for creating polished websites. I enjoy
+                solving problems, turning ideas into working pages, and learning new front-end tools every day.</p>
         </section>
 
         <section id="skills" class="section">
@@ -334,22 +359,26 @@
                 <div class="timeline-item">
                     <span>Front-End Developement • 2025</span>
                     <h3>HTML/CSS Build Support</h3>
-                    <p>Assisted with layout updates, responsive design fixes, and user interface improvements for web pages.</p>
+                    <p>Assisted with layout updates, responsive design fixes, and user interface improvements for web
+                        pages.</p>
                 </div>
                 <div class="timeline-item">
                     <span>Web Designer • 2024</span>
                     <h3>Community Project</h3>
-                    <p>Designed and delivered a clean landing page for a local student group, improving readability and mobile usability.</p>
+                    <p>Designed and delivered a clean landing page for a local student group, improving readability and
+                        mobile usability.</p>
                 </div>
                 <div class="timeline-item">
                     <span>Student Project • 2024</span>
                     <h3>Personal Portfolio</h3>
-                    <p>Built a polished portfolio website to showcase projects, skills, and contact details with a consistent visual style.</p>
+                    <p>Built a polished portfolio website to showcase projects, skills, and contact details with a
+                        consistent visual style.</p>
                 </div>
                 <div class="timeline-item">
                     <span>Team Collaborator • 2023</span>
                     <h3>Project Research</h3>
-                    <p>Worked alongside peers to research best practices in web design and prepare presentations for class projects.</p>
+                    <p>Worked alongside peers to research best practices in web design and prepare presentations for
+                        class projects.</p>
                 </div>
             </div>
         </section>
@@ -360,11 +389,13 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <h3>Responsive Portfolio</h3>
-                    <p>A modern portfolio website showcasing work, skills, and a contact section with smooth navigation.</p>
+                    <p>A modern portfolio website showcasing work, skills, and a contact section with smooth navigation.
+                    </p>
                 </div>
                 <div class="project-card">
                     <h3>Landing Page Design</h3>
-                    <p>Created a polished homepage concept focused on clear typography, visual hierarchy, and easy layout flow.</p>
+                    <p>Created a polished homepage concept focused on clear typography, visual hierarchy, and easy
+                        layout flow.</p>
                 </div>
             </div>
         </section>
@@ -375,11 +406,13 @@
             <div class="feature-grid">
                 <div class="card">
                     <h3>Current Student</h3>
-                    <p>Studying in college while growing my skills in web development, design, and creative problem solving.</p>
+                    <p>Studying in college while growing my skills in web development, design, and creative problem
+                        solving.</p>
                 </div>
                 <div class="card">
                     <h3>Self-Learning</h3>
-                    <p>Regularly learning new front-end tools and techniques through online courses, tutorials, and personal practice.</p>
+                    <p>Regularly learning new front-end tools and techniques through online courses, tutorials, and
+                        personal practice.</p>
                 </div>
             </div>
         </section>
@@ -388,11 +421,14 @@
             <span class="text-brown">Let's connect</span>
             <h2>Contact Me</h2>
             <div class="contact-card">
-                <p>If you have a project, idea, or opportunity to collaborate, feel free to reach out. I am open to learning and contributing to new web experiences.</p>
+                <p>If you have a project, idea, or opportunity to collaborate, feel free to reach out. I am open to
+                    learning and contributing to new web experiences.</p>
                 <div class="link-box">
                     <a class="action-button" href="anweshadas34138@gmail.com">Email Me</a>
-                    <a class="action-button" href="https://www.linkedin.com/in/anwesha-das-0a8361330/" target="_blank" rel="noreferrer">LinkedIn</a>
-                    <a class="action-button" href="https://github.com/anweshadas09" target="_blank" rel="noreferrer">GitHub</a>
+                    <a class="action-button" href="https://www.linkedin.com/in/anwesha-das-0a8361330/" target="_blank"
+                        rel="noreferrer">LinkedIn</a>
+                    <a class="action-button" href="https://github.com/anweshadas09" target="_blank"
+                        rel="noreferrer">GitHub</a>
                 </div>
             </div>
         </section>
