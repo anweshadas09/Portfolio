@@ -7,7 +7,7 @@
     <title>Anwesha's Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -18,7 +18,7 @@
         body {
             background-color: rgb(53, 32, 2);
             color: white;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Poppins', sans-serif;
             line-height: 1.6;
         }
 
@@ -79,6 +79,13 @@
 
         .section {
             padding: 80px 0;
+        }
+
+        h1,
+        h2 {
+            font-family: 'Black Ops One', cursive;
+            letter-spacing: 0.03em;
+            font-weight: 700;
         }
 
         .section h2 {
@@ -142,18 +149,30 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 14px 22px;
-            background: rgb(241, 170, 93);
+            padding: 14px 28px;
+            background: linear-gradient(135deg, rgb(241, 170, 93) 0%, rgb(255, 195, 108) 100%);
             color: rgb(53, 32, 2);
             font-weight: 700;
             text-decoration: none;
-            border-radius: 12px;
-            transition: transform 0.2s ease, background-color 0.2s ease;
+            border-radius: 25px;
+            border: 2px solid rgba(255, 195, 108, 0.3);
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(241, 170, 93, 0.25);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.9rem;
         }
 
         .action-button:hover {
-            background: rgb(255, 195, 108);
-            transform: translateY(-2px);
+            background: linear-gradient(135deg, rgb(255, 195, 108) 0%, rgb(255, 210, 130) 100%);
+            transform: translateY(-4px);
+            box-shadow: 0 14px 32px rgba(241, 170, 93, 0.4);
+            border-color: rgba(255, 210, 130, 0.5);
+        }
+
+        .action-button:active {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(241, 170, 93, 0.3);
         }
 
         .banner-image {
@@ -261,6 +280,39 @@
             text-decoration: none;
         }
 
+        .education-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        .education-card h3 {
+            margin-bottom: 6px;
+            font-size: 1.1rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+        .education-meta {
+            font-size: 0.95rem;
+            color: rgb(239, 154, 63);
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .education-location {
+            font-size: 0.9rem;
+            color: #c9b89e;
+            margin-bottom: 12px;
+        }
+
+        .education-description {
+            color: #e8e2d8;
+            font-size: 0.95rem;
+        }
+
         footer {
             text-align: center;
             padding: 24px 0;
@@ -313,11 +365,10 @@
     <main>
         <section id="home" class="section banner">
             <div class="banner-content">
-                <div class="text-brown">Hello! I am Anwesha</div>
+                <div class="text-brown">Hello! Everyone</div>
                 <h1>Hiii, my name is <span class="accent">Anwesha</span></h1>
-                <p class="intro">I am a student and aspiring web developer who loves building clean, responsive websites
-                    and intuitive digital experiences.</p>
-                <p>Currently creating beautiful UI designs by day and exploring new web ideas by night. I am a <span
+                <p class="intro">Hey, I'm Anwesha, a B.Tech student pursuing Information Technology at JISCE,exploring the world of web development one bug at a time. I'm a Designer by choice, developer by necessity, and a certified jugaadu engineer whenever deadlines get too close.</p>
+                <p> So you can call me a <span
                         id="element" class="typed"></span></p>
                 <div class="link-box">
                     <a class="action-button" href="https://github.com/anweshadas09" target="_blank"
@@ -347,7 +398,7 @@
                 <div class="skill-pill">Python</div>
                 <div class="skill-pill">Git</div>
                 <div class="skill-pill">UI Design</div>
-                <div class="skill-pill">Problem Solving</div>
+                <div class="skill-pill">JAVA</div>
                 <div class="skill-pill">Django</div>
             </div>
         </section>
@@ -403,16 +454,24 @@
         <section id="education" class="section">
             <span class="text-brown">Learning journey</span>
             <h2>Education</h2>
-            <div class="feature-grid">
-                <div class="card">
-                    <h3>Current Student</h3>
-                    <p>Studying in college while growing my skills in web development, design, and creative problem
-                        solving.</p>
+            <div>
+                <div class="education-card">
+                    <h3>B.Tech in Information Technology</h3>
+                    <div class="education-meta">JIS College of Engineering</div>
+                    <div class="education-location">📍 Kalyani, India • 2024 - 2028</div>
+                    <div class="education-description">Pursuing a degree in Information Technology with focus on web development, data structures, and software engineering principles.</div>
                 </div>
-                <div class="card">
-                    <h3>Self-Learning</h3>
-                    <p>Regularly learning new front-end tools and techniques through online courses, tutorials, and
-                        personal practice.</p>
+                <div class="education-card">
+                    <h3>High School</h3>
+                    <div class="education-meta">Holy Family Girls' High School</div>
+                    <div class="education-location">📍 Krishnanagar • 2015 - 2023</div>
+                    <div class="education-description">Completed high school with specialization in Science and Computer Science with 77.3% in H.S and 92.5% in Secondery Board</div>
+                </div>
+                <div class="education-card">
+                    <h3>Primary School</h3>
+                    <div class="education-meta">Holy Family Girls' Primary School</div>
+                    <div class="education-location">📍 Krishnanagar • 2011 - 2014</div>
+                    <div class="education-description">Completed primary school with a strong foundation in academics and extracurricular activities.</div>
                 </div>
             </div>
         </section>
@@ -421,8 +480,9 @@
             <span class="text-brown">Let's connect</span>
             <h2>Contact Me</h2>
             <div class="contact-card">
-                <p>If you have a project, idea, or opportunity to collaborate, feel free to reach out. I am open to
-                    learning and contributing to new web experiences.</p>
+                <p>Whether it's a project, a hackathon, or a random 2 AM idea that somehow sounds brilliant, feel free
+                    to reach out. My inbox is always accepting new adventures.
+                    </p>
                 <div class="link-box">
                     <a class="action-button" href="anweshadas34138@gmail.com">Email Me</a>
                     <a class="action-button" href="https://www.linkedin.com/in/anwesha-das-0a8361330/" target="_blank"
